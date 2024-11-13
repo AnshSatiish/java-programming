@@ -1,0 +1,150 @@
+<html>
+<head>
+<title>StudentInfoApp.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #6aab73;}
+.s4 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+StudentInfoApp.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">com</span><span class="s2">.</span><span class="s1">opsdevelop</span><span class="s2">.</span><span class="s1">studentinfo</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">javafx</span><span class="s2">.</span><span class="s1">application</span><span class="s2">.</span><span class="s1">Application</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">javafx</span><span class="s2">.</span><span class="s1">scene</span><span class="s2">.</span><span class="s1">Scene</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">javafx</span><span class="s2">.</span><span class="s1">scene</span><span class="s2">.</span><span class="s1">control</span><span class="s2">.*;</span>
+<span class="s0">import </span><span class="s1">javafx</span><span class="s2">.</span><span class="s1">scene</span><span class="s2">.</span><span class="s1">layout</span><span class="s2">.</span><span class="s1">GridPane</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">javafx</span><span class="s2">.</span><span class="s1">stage</span><span class="s2">.</span><span class="s1">Stage</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">javafx</span><span class="s2">.</span><span class="s1">geometry</span><span class="s2">.</span><span class="s1">Insets</span><span class="s2">;</span>
+
+<span class="s0">public class </span><span class="s1">StudentInfoApp </span><span class="s0">extends </span><span class="s1">Application </span><span class="s2">{</span>
+    <span class="s1">@Override</span>
+    <span class="s0">public void </span><span class="s1">start</span><span class="s2">(</span><span class="s1">Stage stage</span><span class="s2">) {</span>
+        <span class="s1">stage</span><span class="s2">.</span><span class="s1">setTitle</span><span class="s2">(</span><span class="s3">&quot;Student Information&quot;</span><span class="s2">);</span>
+        <span class="s1">GridPane grid </span><span class="s2">= </span><span class="s0">new </span><span class="s1">GridPane</span><span class="s2">();</span>
+        <span class="s1">grid</span><span class="s2">.</span><span class="s1">setPadding</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Insets</span><span class="s2">(</span><span class="s4">15</span><span class="s2">));</span>
+        <span class="s1">grid</span><span class="s2">.</span><span class="s1">setVgap</span><span class="s2">(</span><span class="s4">8</span><span class="s2">);</span>
+        <span class="s1">grid</span><span class="s2">.</span><span class="s1">setHgap</span><span class="s2">(</span><span class="s4">10</span><span class="s2">);</span>
+
+        <span class="s1">TextField name </span><span class="s2">= </span><span class="s0">new </span><span class="s1">TextField</span><span class="s2">();</span>
+        <span class="s1">name</span><span class="s2">.</span><span class="s1">setPromptText</span><span class="s2">(</span><span class="s3">&quot;Full Name&quot;</span><span class="s2">);</span>
+
+        <span class="s1">TextField address </span><span class="s2">= </span><span class="s0">new </span><span class="s1">TextField</span><span class="s2">();</span>
+        <span class="s1">address</span><span class="s2">.</span><span class="s1">setPromptText</span><span class="s2">(</span><span class="s3">&quot;Address&quot;</span><span class="s2">);</span>
+
+        <span class="s1">TextField city </span><span class="s2">= </span><span class="s0">new </span><span class="s1">TextField</span><span class="s2">();</span>
+        <span class="s1">city</span><span class="s2">.</span><span class="s1">setPromptText</span><span class="s2">(</span><span class="s3">&quot;City&quot;</span><span class="s2">);</span>
+
+        <span class="s1">TextField province </span><span class="s2">= </span><span class="s0">new </span><span class="s1">TextField</span><span class="s2">();</span>
+        <span class="s1">province</span><span class="s2">.</span><span class="s1">setPromptText</span><span class="s2">(</span><span class="s3">&quot;Province&quot;</span><span class="s2">);</span>
+
+        <span class="s1">TextField postalCode </span><span class="s2">= </span><span class="s0">new </span><span class="s1">TextField</span><span class="s2">();</span>
+        <span class="s1">postalCode</span><span class="s2">.</span><span class="s1">setPromptText</span><span class="s2">(</span><span class="s3">&quot;Postal Code&quot;</span><span class="s2">);</span>
+
+        <span class="s1">TextField phone </span><span class="s2">= </span><span class="s0">new </span><span class="s1">TextField</span><span class="s2">();</span>
+        <span class="s1">phone</span><span class="s2">.</span><span class="s1">setPromptText</span><span class="s2">(</span><span class="s3">&quot;Phone Number&quot;</span><span class="s2">);</span>
+
+        <span class="s1">TextField email </span><span class="s2">= </span><span class="s0">new </span><span class="s1">TextField</span><span class="s2">();</span>
+        <span class="s1">email</span><span class="s2">.</span><span class="s1">setPromptText</span><span class="s2">(</span><span class="s3">&quot;Email&quot;</span><span class="s2">);</span>
+
+        <span class="s1">RadioButton compsci </span><span class="s2">= </span><span class="s0">new </span><span class="s1">RadioButton</span><span class="s2">(</span><span class="s3">&quot;Computer Science&quot;</span><span class="s2">);</span>
+        <span class="s1">RadioButton business </span><span class="s2">= </span><span class="s0">new </span><span class="s1">RadioButton</span><span class="s2">(</span><span class="s3">&quot;Business&quot;</span><span class="s2">);</span>
+        <span class="s1">ToggleGroup majorGroup </span><span class="s2">= </span><span class="s0">new </span><span class="s1">ToggleGroup</span><span class="s2">();</span>
+        <span class="s1">compsci</span><span class="s2">.</span><span class="s1">setToggleGroup</span><span class="s2">(</span><span class="s1">majorGroup</span><span class="s2">);</span>
+        <span class="s1">business</span><span class="s2">.</span><span class="s1">setToggleGroup</span><span class="s2">(</span><span class="s1">majorGroup</span><span class="s2">);</span>
+
+        <span class="s1">ComboBox</span><span class="s2">&lt;</span><span class="s1">String</span><span class="s2">&gt; </span><span class="s1">coursebox </span><span class="s2">= </span><span class="s0">new </span><span class="s1">ComboBox</span><span class="s2">&lt;&gt;();</span>
+        <span class="s1">coursebox</span><span class="s2">.</span><span class="s1">getItems</span><span class="s2">().</span><span class="s1">addAll</span><span class="s2">(</span><span class="s3">&quot;Java&quot;</span><span class="s2">, </span><span class="s3">&quot;Python&quot;</span><span class="s2">, </span><span class="s3">&quot;C#&quot;</span><span class="s2">);</span>
+        <span class="s1">ListView</span><span class="s2">&lt;</span><span class="s1">String</span><span class="s2">&gt; </span><span class="s1">courseList </span><span class="s2">= </span><span class="s0">new </span><span class="s1">ListView</span><span class="s2">&lt;&gt;();</span>
+        <span class="s1">Button addCourseButton </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Button</span><span class="s2">(</span><span class="s3">&quot;Add Course&quot;</span><span class="s2">);</span>
+
+        <span class="s1">CheckBox studentCouncil </span><span class="s2">= </span><span class="s0">new </span><span class="s1">CheckBox</span><span class="s2">(</span><span class="s3">&quot;Student Council&quot;</span><span class="s2">);</span>
+        <span class="s1">CheckBox volunteerWork </span><span class="s2">= </span><span class="s0">new </span><span class="s1">CheckBox</span><span class="s2">(</span><span class="s3">&quot;Volunteer Work&quot;</span><span class="s2">);</span>
+        <span class="s1">TextArea displayArea </span><span class="s2">= </span><span class="s0">new </span><span class="s1">TextArea</span><span class="s2">();</span>
+        <span class="s1">displayArea</span><span class="s2">.</span><span class="s1">setEditable</span><span class="s2">(</span><span class="s0">false</span><span class="s2">);</span>
+
+        <span class="s1">Button displayButton </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Button</span><span class="s2">(</span><span class="s3">&quot;Display&quot;</span><span class="s2">);</span>
+
+        <span class="s1">grid</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Label</span><span class="s2">(</span><span class="s3">&quot;Name:&quot;</span><span class="s2">), </span><span class="s4">0</span><span class="s2">, </span><span class="s4">0</span><span class="s2">);</span>
+        <span class="s1">grid</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">name</span><span class="s2">, </span><span class="s4">1</span><span class="s2">, </span><span class="s4">0</span><span class="s2">);</span>
+        <span class="s1">grid</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Label</span><span class="s2">(</span><span class="s3">&quot;Address:&quot;</span><span class="s2">), </span><span class="s4">0</span><span class="s2">, </span><span class="s4">1</span><span class="s2">);</span>
+        <span class="s1">grid</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">address</span><span class="s2">, </span><span class="s4">1</span><span class="s2">, </span><span class="s4">1</span><span class="s2">);</span>
+        <span class="s1">grid</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Label</span><span class="s2">(</span><span class="s3">&quot;City:&quot;</span><span class="s2">), </span><span class="s4">0</span><span class="s2">, </span><span class="s4">2</span><span class="s2">);</span>
+        <span class="s1">grid</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">city</span><span class="s2">, </span><span class="s4">1</span><span class="s2">, </span><span class="s4">2</span><span class="s2">);</span>
+        <span class="s1">grid</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Label</span><span class="s2">(</span><span class="s3">&quot;Province:&quot;</span><span class="s2">), </span><span class="s4">0</span><span class="s2">, </span><span class="s4">3</span><span class="s2">);</span>
+        <span class="s1">grid</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">province</span><span class="s2">, </span><span class="s4">1</span><span class="s2">, </span><span class="s4">3</span><span class="s2">);</span>
+        <span class="s1">grid</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Label</span><span class="s2">(</span><span class="s3">&quot;Postal Code:&quot;</span><span class="s2">), </span><span class="s4">0</span><span class="s2">, </span><span class="s4">4</span><span class="s2">);</span>
+        <span class="s1">grid</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">postalCode</span><span class="s2">, </span><span class="s4">1</span><span class="s2">, </span><span class="s4">4</span><span class="s2">);</span>
+        <span class="s1">grid</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Label</span><span class="s2">(</span><span class="s3">&quot;Phone Number:&quot;</span><span class="s2">), </span><span class="s4">0</span><span class="s2">, </span><span class="s4">5</span><span class="s2">);</span>
+        <span class="s1">grid</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">phone</span><span class="s2">, </span><span class="s4">1</span><span class="s2">, </span><span class="s4">5</span><span class="s2">);</span>
+        <span class="s1">grid</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Label</span><span class="s2">(</span><span class="s3">&quot;Email:&quot;</span><span class="s2">), </span><span class="s4">0</span><span class="s2">, </span><span class="s4">6</span><span class="s2">);</span>
+        <span class="s1">grid</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">email</span><span class="s2">, </span><span class="s4">1</span><span class="s2">, </span><span class="s4">6</span><span class="s2">);</span>
+
+        <span class="s1">grid</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">compsci</span><span class="s2">, </span><span class="s4">0</span><span class="s2">, </span><span class="s4">7</span><span class="s2">);</span>
+        <span class="s1">grid</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">business</span><span class="s2">, </span><span class="s4">1</span><span class="s2">, </span><span class="s4">7</span><span class="s2">);</span>
+
+        <span class="s1">grid</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Label</span><span class="s2">(</span><span class="s3">&quot;Courses:&quot;</span><span class="s2">), </span><span class="s4">0</span><span class="s2">, </span><span class="s4">8</span><span class="s2">);</span>
+        <span class="s1">grid</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">coursebox</span><span class="s2">, </span><span class="s4">1</span><span class="s2">, </span><span class="s4">8</span><span class="s2">);</span>
+        <span class="s1">grid</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">addCourseButton</span><span class="s2">, </span><span class="s4">1</span><span class="s2">, </span><span class="s4">9</span><span class="s2">);</span>
+        <span class="s1">grid</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">courseList</span><span class="s2">, </span><span class="s4">1</span><span class="s2">, </span><span class="s4">10</span><span class="s2">);</span>
+
+        <span class="s1">grid</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">studentCouncil</span><span class="s2">, </span><span class="s4">0</span><span class="s2">, </span><span class="s4">11</span><span class="s2">);</span>
+        <span class="s1">grid</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">volunteerWork</span><span class="s2">, </span><span class="s4">1</span><span class="s2">, </span><span class="s4">11</span><span class="s2">);</span>
+
+        <span class="s1">grid</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">displayButton</span><span class="s2">, </span><span class="s4">0</span><span class="s2">, </span><span class="s4">12</span><span class="s2">);</span>
+        <span class="s1">grid</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">displayArea</span><span class="s2">, </span><span class="s4">1</span><span class="s2">, </span><span class="s4">12</span><span class="s2">);</span>
+
+        <span class="s1">addCourseButton</span><span class="s2">.</span><span class="s1">setOnAction</span><span class="s2">(</span><span class="s1">e -&gt; </span><span class="s2">{</span>
+            <span class="s1">String selectedCourse </span><span class="s2">= </span><span class="s1">coursebox</span><span class="s2">.</span><span class="s1">getValue</span><span class="s2">();</span>
+            <span class="s0">if </span><span class="s2">(</span><span class="s1">selectedCourse </span><span class="s2">!= </span><span class="s0">null </span><span class="s2">&amp;&amp; !</span><span class="s1">courseList</span><span class="s2">.</span><span class="s1">getItems</span><span class="s2">().</span><span class="s1">contains</span><span class="s2">(</span><span class="s1">selectedCourse</span><span class="s2">)) {</span>
+                <span class="s1">courseList</span><span class="s2">.</span><span class="s1">getItems</span><span class="s2">().</span><span class="s1">add</span><span class="s2">(</span><span class="s1">selectedCourse</span><span class="s2">);</span>
+            <span class="s2">}</span>
+        <span class="s2">});</span>
+
+        <span class="s1">displayButton</span><span class="s2">.</span><span class="s1">setOnAction</span><span class="s2">(</span><span class="s1">e -&gt; </span><span class="s2">{</span>
+            <span class="s1">StringBuilder studentInfo </span><span class="s2">= </span><span class="s0">new </span><span class="s1">StringBuilder</span><span class="s2">();</span>
+            <span class="s1">studentInfo</span><span class="s2">.</span><span class="s1">append</span><span class="s2">(</span><span class="s3">&quot;Name: &quot;</span><span class="s2">).</span><span class="s1">append</span><span class="s2">(</span><span class="s1">name</span><span class="s2">.</span><span class="s1">getText</span><span class="s2">()).</span><span class="s1">append</span><span class="s2">(</span><span class="s3">&quot;</span><span class="s0">\n</span><span class="s3">&quot;</span><span class="s2">)</span>
+                    <span class="s2">.</span><span class="s1">append</span><span class="s2">(</span><span class="s3">&quot;Address: &quot;</span><span class="s2">).</span><span class="s1">append</span><span class="s2">(</span><span class="s1">address</span><span class="s2">.</span><span class="s1">getText</span><span class="s2">()).</span><span class="s1">append</span><span class="s2">(</span><span class="s3">&quot;</span><span class="s0">\n</span><span class="s3">&quot;</span><span class="s2">)</span>
+                    <span class="s2">.</span><span class="s1">append</span><span class="s2">(</span><span class="s3">&quot;City: &quot;</span><span class="s2">).</span><span class="s1">append</span><span class="s2">(</span><span class="s1">city</span><span class="s2">.</span><span class="s1">getText</span><span class="s2">()).</span><span class="s1">append</span><span class="s2">(</span><span class="s3">&quot;</span><span class="s0">\n</span><span class="s3">&quot;</span><span class="s2">)</span>
+                    <span class="s2">.</span><span class="s1">append</span><span class="s2">(</span><span class="s3">&quot;Province: &quot;</span><span class="s2">).</span><span class="s1">append</span><span class="s2">(</span><span class="s1">province</span><span class="s2">.</span><span class="s1">getText</span><span class="s2">()).</span><span class="s1">append</span><span class="s2">(</span><span class="s3">&quot;</span><span class="s0">\n</span><span class="s3">&quot;</span><span class="s2">)</span>
+                    <span class="s2">.</span><span class="s1">append</span><span class="s2">(</span><span class="s3">&quot;Postal Code: &quot;</span><span class="s2">).</span><span class="s1">append</span><span class="s2">(</span><span class="s1">postalCode</span><span class="s2">.</span><span class="s1">getText</span><span class="s2">()).</span><span class="s1">append</span><span class="s2">(</span><span class="s3">&quot;</span><span class="s0">\n</span><span class="s3">&quot;</span><span class="s2">)</span>
+                    <span class="s2">.</span><span class="s1">append</span><span class="s2">(</span><span class="s3">&quot;Phone Number: &quot;</span><span class="s2">).</span><span class="s1">append</span><span class="s2">(</span><span class="s1">phone</span><span class="s2">.</span><span class="s1">getText</span><span class="s2">()).</span><span class="s1">append</span><span class="s2">(</span><span class="s3">&quot;</span><span class="s0">\n</span><span class="s3">&quot;</span><span class="s2">)</span>
+                    <span class="s2">.</span><span class="s1">append</span><span class="s2">(</span><span class="s3">&quot;Email: &quot;</span><span class="s2">).</span><span class="s1">append</span><span class="s2">(</span><span class="s1">email</span><span class="s2">.</span><span class="s1">getText</span><span class="s2">()).</span><span class="s1">append</span><span class="s2">(</span><span class="s3">&quot;</span><span class="s0">\n</span><span class="s3">&quot;</span><span class="s2">);</span>
+
+            <span class="s1">RadioButton selectedMajor </span><span class="s2">= (</span><span class="s1">RadioButton</span><span class="s2">) </span><span class="s1">majorGroup</span><span class="s2">.</span><span class="s1">getSelectedToggle</span><span class="s2">();</span>
+            <span class="s0">if </span><span class="s2">(</span><span class="s1">selectedMajor </span><span class="s2">!= </span><span class="s0">null</span><span class="s2">) {</span>
+                <span class="s1">studentInfo</span><span class="s2">.</span><span class="s1">append</span><span class="s2">(</span><span class="s3">&quot;Major: &quot;</span><span class="s2">).</span><span class="s1">append</span><span class="s2">(</span><span class="s1">selectedMajor</span><span class="s2">.</span><span class="s1">getText</span><span class="s2">()).</span><span class="s1">append</span><span class="s2">(</span><span class="s3">&quot;</span><span class="s0">\n</span><span class="s3">&quot;</span><span class="s2">);</span>
+            <span class="s2">}</span>
+
+            <span class="s1">studentInfo</span><span class="s2">.</span><span class="s1">append</span><span class="s2">(</span><span class="s3">&quot;Courses: </span><span class="s0">\n</span><span class="s3">&quot;</span><span class="s2">).</span><span class="s1">append</span><span class="s2">(</span><span class="s1">courseList</span><span class="s2">.</span><span class="s1">getItems</span><span class="s2">()).</span><span class="s1">append</span><span class="s2">(</span><span class="s3">&quot;</span><span class="s0">\n</span><span class="s3">&quot;</span><span class="s2">);</span>
+            <span class="s1">studentInfo</span><span class="s2">.</span><span class="s1">append</span><span class="s2">(</span><span class="s3">&quot;Activities: </span><span class="s0">\n </span><span class="s3">&quot;</span><span class="s2">);</span>
+
+            <span class="s0">if </span><span class="s2">(</span><span class="s1">studentCouncil</span><span class="s2">.</span><span class="s1">isSelected</span><span class="s2">()) {</span>
+                <span class="s1">studentInfo</span><span class="s2">.</span><span class="s1">append</span><span class="s2">(</span><span class="s3">&quot;Student Council</span><span class="s0">\n</span><span class="s3">&quot;</span><span class="s2">);</span>
+            <span class="s2">}</span>
+            <span class="s0">if </span><span class="s2">(</span><span class="s1">volunteerWork</span><span class="s2">.</span><span class="s1">isSelected</span><span class="s2">()) {</span>
+                <span class="s1">studentInfo</span><span class="s2">.</span><span class="s1">append</span><span class="s2">(</span><span class="s3">&quot;Volunteer Work</span><span class="s0">\n</span><span class="s3">&quot;</span><span class="s2">);</span>
+            <span class="s2">}</span>
+
+            <span class="s1">displayArea</span><span class="s2">.</span><span class="s1">setText</span><span class="s2">(</span><span class="s1">studentInfo</span><span class="s2">.</span><span class="s1">toString</span><span class="s2">());</span>
+        <span class="s2">});</span>
+        
+        <span class="s1">Scene scene </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Scene</span><span class="s2">(</span><span class="s1">grid</span><span class="s2">, </span><span class="s4">600</span><span class="s2">, </span><span class="s4">600</span><span class="s2">);</span>
+        <span class="s1">stage</span><span class="s2">.</span><span class="s1">setScene</span><span class="s2">(</span><span class="s1">scene</span><span class="s2">);</span>
+        <span class="s1">stage</span><span class="s2">.</span><span class="s1">show</span><span class="s2">();</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public static void </span><span class="s1">main</span><span class="s2">(</span><span class="s1">String</span><span class="s2">[] </span><span class="s1">args</span><span class="s2">) {</span>
+        <span class="s1">launch</span><span class="s2">();</span>
+    <span class="s2">}</span>
+<span class="s2">}</span>
+</pre>
+</body>
+</html>
